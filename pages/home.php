@@ -10,7 +10,7 @@
 
 <?php foreach($db->query('select * from article','\App\Table\Article') as $post):?>
           <h2><a href=<?=$post->getUrl()?> > <?= $post -> titre ?></a></h2>
-          <p> <?= $post -> titre ?> </p>
+          <p> <?= $post -> getExtrait() ?> </p>
 <?php endforeach; ?>
 </ul>
 </div>
